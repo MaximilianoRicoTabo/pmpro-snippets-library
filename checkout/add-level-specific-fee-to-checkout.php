@@ -7,7 +7,7 @@
  * layout: snippet
  * collection: checkout
  * category: stripe
- * url: https://www.paidmembershipspro.com/adjust-membership-pricing-by-payment-gateway/
+ * link: https://www.paidmembershipspro.com/adjust-membership-pricing-by-payment-gateway/
  * 
  * You can add this recipe to your site by creating a custom plugin
  * or using the Code Snippets plugin available for free in the WordPress repository.
@@ -18,15 +18,15 @@ function my_pmpro_checkout_level( $level ) {
 	//Get the gateway
 	$gateway = pmpro_getGateway();
 	//Bail if no gateway configured
-	if( ! $gateway ) {
+	if ( ! $gateway ) {
 		return $level;
 	}
 	//Bail if the gateway is not Stripe
-	if( $gateway !== 'stripe' ) {
+	if ( $gateway !== 'stripe' ) {
 		return $level;
 	}
 	//Specify the level IDs you want to adjust within the array
-	if( in_array( $level->id, array( 1, 2, 3 ) ) ) {
+	if ( in_array( $level->id, array( 1, 2, 3 ) ) ) {
 		//Updates initial payment value
 		$level->initial_payment = $level->initial_payment + 3;
 		//Updates recurring payment value

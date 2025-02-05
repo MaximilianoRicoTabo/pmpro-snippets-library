@@ -1,9 +1,6 @@
 <?php
 /**
- * This recipe will add a fee to the initial and recurring value for specific levels when using Stripe
- * Specify your membership levels on line 23
- * 
- * title: Add A Level-Specific Fixed Fee to Checkout When Using Stripe
+ * title: Add A Percentage Based Fee to Checkout When Using Stripe
  * layout: snippet
  * collection: checkout
  * category: stripe
